@@ -1,0 +1,290 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "HCK",
+    "collectionId": "a83f3042-d388-4d56-a699-053441ed0c55",
+    "dateExported": "2024-12-25T13:48:50.755Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "3d1606dd-e230-436e-ab53-ca4a64ebf738",
+            "name": "Sign",
+            "containerId": "",
+            "created": "2024-12-11T19:56:54.134Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "2f900994-11ed-427b-8645-987176bb4762",
+            "name": "Registration",
+            "containerId": "3d1606dd-e230-436e-ab53-ca4a64ebf738",
+            "created": "2024-12-11T23:03:48.127Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "b35a6a71-b688-47f8-aaa4-8545132f1733",
+            "name": "Forget Password",
+            "containerId": "3d1606dd-e230-436e-ab53-ca4a64ebf738",
+            "created": "2024-12-11T23:05:44.699Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "c55b8d06-6e66-48c0-9ba4-f61349d587ea",
+            "name": "login",
+            "containerId": "3d1606dd-e230-436e-ab53-ca4a64ebf738",
+            "created": "2024-12-11T23:31:30.656Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "00173b6c-5281-4836-b1e7-067d8f7daa1f",
+            "name": "Logout",
+            "containerId": "3d1606dd-e230-436e-ab53-ca4a64ebf738",
+            "created": "2024-12-20T17:47:19.954Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "6017a719-a57f-40a3-beba-3b61e41f3d6c",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "2f900994-11ed-427b-8645-987176bb4762",
+            "name": "send_email_pass",
+            "url": "http://localhost:3000/sign/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-12-11T19:57:11.879Z",
+            "modified": "2024-12-20T17:55:52.154Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"email\":\"sarvesh2004sd@gmail.com\",\n  \"password\":\"12345678\",\n  \"passwordC\":\"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6b8ca146-3d77-4f63-b83b-8c912fa5e544",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "2f900994-11ed-427b-8645-987176bb4762",
+            "name": "get_html_for verification",
+            "url": "http://localhost:3000/sign/verify/token",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-12-11T20:25:15.361Z",
+            "modified": "2024-12-11T20:46:49.418Z",
+            "headers": []
+        },
+        {
+            "_id": "1190dabe-e5d9-43fc-b63b-b99e6717e7c5",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "2f900994-11ed-427b-8645-987176bb4762",
+            "name": "registration link verification",
+            "url": "http://localhost:3000/sign/reg_v",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-12-11T20:54:53.136Z",
+            "modified": "2024-12-25T13:21:25.985Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3OCIsImlhdCI6MTczNTEzMjg1OSwiZXhwIjoxNzM1MTM2NDU5fQ.D1oW71LNdUNKN44NJzcXckswrgwh9Rk4eyWx52CwmFQ\"}",
+                "form": []
+            }
+        },
+        {
+            "_id": "3068ee26-bb69-480b-baf8-0b1c2e141f39",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "b35a6a71-b688-47f8-aaa4-8545132f1733",
+            "name": "forget password",
+            "url": "http://localhost:3000/sign/forget_password",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-12-11T23:06:10.770Z",
+            "modified": "2024-12-19T10:03:37.448Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"email\":\"sarvesh2004sd@gmail.com\"}",
+                "form": []
+            }
+        },
+        {
+            "_id": "88bff88d-d46d-4932-8e65-842be0f7dcff",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "2f900994-11ed-427b-8645-987176bb4762",
+            "name": "get_html_for verification Copy Copy",
+            "url": "http://localhost:3000/sign/get_gjwt",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-12-12T03:51:47.621Z",
+            "modified": "2024-12-20T18:46:05.433Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"email\":\"d05777sarvesh@dpsmarutikunj.org\"}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7d32820d-4bd6-4224-a88e-ff886e8f4ee8",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "b35a6a71-b688-47f8-aaa4-8545132f1733",
+            "name": "reset pass",
+            "url": "http://localhost:3000/sign/reset_pass",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-12-11T23:09:49.776Z",
+            "modified": "2024-12-20T17:41:36.216Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiaWF0IjoxNzM0NzE2NDQ3LCJleHAiOjE3MzQ3MTgyNDd9.9uvtnuAXiSlxGAMXvsCa-YFc_7DrMNQjimS5MbzitxQ\",\n  \"password\":\"87654321\",\n  \"passwordC\":\"87654321\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b425aca8-e886-426a-af96-b5c8c7d4157f",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "b35a6a71-b688-47f8-aaa4-8545132f1733",
+            "name": "update password",
+            "url": "http://localhost:3000/sign/update_password",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-12-12T00:34:41.213Z",
+            "modified": "2024-12-20T17:09:30.493Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjoxLCJpYXQiOjE3MzQ3MTA5MDIsImV4cCI6MTczNDk3MDEwMn0.pxPPYQGDwl7HHKam_d2M5tLCCfQBI1s-pwf0eWESVpo"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\"otp\":\"363523\",\n  \"password\":\"87654321\",\n  \"passwordC\":\"87654321\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0b2b412c-61a6-4c55-b5fd-0353f2f20302",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "b35a6a71-b688-47f8-aaa4-8545132f1733",
+            "name": "update password OTP",
+            "url": "http://localhost:3000/sign/update_pass_otp",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-12-20T17:05:22.848Z",
+            "modified": "2024-12-20T17:08:04.137Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjoxLCJpYXQiOjE3MzQ3MTA5MDIsImV4cCI6MTczNDk3MDEwMn0.pxPPYQGDwl7HHKam_d2M5tLCCfQBI1s-pwf0eWESVpo"
+                }
+            ]
+        },
+        {
+            "_id": "2c33c689-71f5-435e-b38e-e3cb4776dc90",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "c55b8d06-6e66-48c0-9ba4-f61349d587ea",
+            "name": "login without otp",
+            "url": "http://localhost:3000/sign/login",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-12-11T23:47:25.028Z",
+            "modified": "2024-12-19T10:06:32.614Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"otp\":false,\n  \"email\":\"sarvesh2004sd@gmail.com\",\n  \"password\":\"87654321\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d646a75f-e531-4e44-b092-9049a162052c",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "c55b8d06-6e66-48c0-9ba4-f61349d587ea",
+            "name": "login with otp",
+            "url": "http://localhost:3000/sign/login",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-12-11T23:31:55.222Z",
+            "modified": "2024-12-20T17:42:15.173Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"otp\":true,\n  \"email\":\"sarvesh2004sd@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "88ad049c-5904-4428-a447-32333d76b006",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "00173b6c-5281-4836-b1e7-067d8f7daa1f",
+            "name": "logout",
+            "url": "http://localhost:3000/sign/logout",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-12-20T17:47:19.955Z",
+            "modified": "2024-12-20T17:48:28.349Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjo1LCJpYXQiOjE3MzQ3MTY3OTgsImV4cCI6MTczNDk3NTk5OH0.pCHhoKb40rv-m0feQKlPbk_mIIXLrLd0FnpfoSAkxeY"
+                }
+            ]
+        },
+        {
+            "_id": "0ca615e2-441f-4e48-afda-6825b33a76b0",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "c55b8d06-6e66-48c0-9ba4-f61349d587ea",
+            "name": "verify otp and login",
+            "url": "http://localhost:3000/sign/login_otp",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-12-11T23:49:06.147Z",
+            "modified": "2024-12-20T17:42:41.237Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"otp\":304202,\n  \"email\":\"sarvesh2004sd@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0848d1e1-626b-4810-b865-d168e3844710",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "00173b6c-5281-4836-b1e7-067d8f7daa1f",
+            "name": "logout All",
+            "url": "http://localhost:3000/sign/logout_from_everywhere",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-12-20T17:52:15.499Z",
+            "modified": "2024-12-20T17:53:44.434Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjo2LCJpYXQiOjE3MzQ3MTY4MTcsImV4cCI6MTczNDk3NjAxN30.WziTqqoLlzSuLxBA_tfzslwIvlDTAq1Lwj9VhG6a7M8"
+                }
+            ]
+        },
+        {
+            "_id": "6b09c1a6-c578-4ec7-9d68-5fbeac6fe360",
+            "colId": "a83f3042-d388-4d56-a699-053441ed0c55",
+            "containerId": "",
+            "name": "Testing saving data",
+            "url": "http://localhost:3000/data/send",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-12-25T13:47:45.000Z",
+            "modified": "2024-12-25T13:47:45.000Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjowLCJpYXQiOjE3MzUxMzI4ODUsImV4cCI6MTczNTM5MjA4NX0.f94MYKveGIWCynXhoxLtACeHt0H3RjnGQgffTlWQPt4"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tanks\": [\n    {\n      \"tankId\": 1,\n      \"fluidLevels\": [\n        { \"level\": 75, \"timestamp\": \"2023-10-01T00:00:00Z\" },\n        { \"level\": 76, \"timestamp\": \"2023-10-01T00:01:00Z\" }],\n      \"waterQuality\": {\n        \"pH\": 7.2,\n        \"turbidity\": 5,\n        \"temperature\": 25,\n        \"tds\": 300,\n        \"timestamp\": \"2023-10-01T00:00:00Z\"\n      }\n    }\n  ]\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "ZAw1jklZF7xA5j7s-WFsaA1qv-iil4SOKqz0l_LFuvJbw-TPlZB-ylF4yf2cYGCyUkvGLEv3npEgEVchw1VTSg"
+}

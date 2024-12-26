@@ -1,0 +1,94 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  verified  Boolean  @default(false)
+  password  Password?
+  otp       Otp[]
+  token_v   Int      @default(0)
+  jwt       Gjwt?
+  tanks     Tank[]
+}
+
+model Password {
+  userId   Int    @unique
+  password String
+  salt     String
+  user     User   @relation(fields: [userId], references: [id])
+}
+
+model Gjwt {
+  userId   Int    @unique
+  jwt      String
+  user     User   @relation(fields: [userId], references: [id])
+}
+
+model Otp {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  otp        String
+  expiresAt  DateTime
+  type       String   @default("login")
+  user       User     @relation(fields: [userId], references: [id])
+  salt       String
+}
+
+model Tank {
+  id            Int           @id @default(autoincrement())
+  name          String
+  userId        Int
+  user          User          @relation(fields: [userId], references: [id])
+  fluidLevels   FluidLevel[]
+  waterQualities WaterQuality[]
+  leakDetections LeakDetection[]
+  alerts        Alert[]
+}
+
+model FluidLevel {
+  id        Int      @id @default(autoincrement())
+  levels    Float[]
+  timestamps DateTime[]
+  tankId    Int
+  tank      Tank     @relation(fields: [tankId], references: [id])
+}
+
+model WaterQuality {
+  id         Int      @id @default(autoincrement())
+  pH         Float
+  turbidity  Float
+  temperature Float
+  tds        Float
+  timestamp  DateTime
+  tankId     Int
+  tank       Tank     @relation(fields: [tankId], references: [id])
+}
+
+model LeakDetection {
+  id        Int      @id @default(autoincrement())
+  status    Boolean
+  timestamp DateTime
+  tankId    Int
+  tank      Tank     @relation(fields: [tankId], references: [id])
+}
+
+model Alert {
+  id                 Int      @id @default(autoincrement())
+  maintenanceRequired Boolean
+  message            String
+  timestamp          DateTime
+  tankId             Int
+  tank               Tank     @relation(fields: [tankId], references: [id])
+}

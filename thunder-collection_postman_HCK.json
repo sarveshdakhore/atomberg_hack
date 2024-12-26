@@ -1,0 +1,408 @@
+{
+    "info": {
+        "_postman_id": "34101e4e-fdd9-405a-bb7b-ade61772e031",
+        "name": "HCK",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Sign",
+            "item": [
+                {
+                    "name": "Registration",
+                    "item": [
+                        {
+                            "name": "send_email_pass",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/register",
+                                    "path": [
+                                        "sign",
+                                        "register"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\"email\":\"sarvesh2004sd@gmail.com\",\n  \"password\":\"12345678\",\n  \"passwordC\":\"12345678\"\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "get_html_for verification",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/verify/token",
+                                    "path": [
+                                        "sign",
+                                        "verify",
+                                        "token"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                }
+                            }
+                        },
+                        {
+                            "name": "registration link verification",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/reg_v",
+                                    "path": [
+                                        "sign",
+                                        "reg_v"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3OCIsImlhdCI6MTczNTEzMjg1OSwiZXhwIjoxNzM1MTM2NDU5fQ.D1oW71LNdUNKN44NJzcXckswrgwh9Rk4eyWx52CwmFQ\"}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "get_html_for verification Copy Copy",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/get_gjwt",
+                                    "path": [
+                                        "sign",
+                                        "get_gjwt"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\"email\":\"d05777sarvesh@dpsmarutikunj.org\"}"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Forget Password",
+                    "item": [
+                        {
+                            "name": "forget password",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/forget_password",
+                                    "path": [
+                                        "sign",
+                                        "forget_password"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\"email\":\"sarvesh2004sd@gmail.com\"}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "reset pass",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/reset_pass",
+                                    "path": [
+                                        "sign",
+                                        "reset_pass"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiaWF0IjoxNzM0NzE2NDQ3LCJleHAiOjE3MzQ3MTgyNDd9.9uvtnuAXiSlxGAMXvsCa-YFc_7DrMNQjimS5MbzitxQ\",\n  \"password\":\"87654321\",\n  \"passwordC\":\"87654321\"\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "update password",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/update_password",
+                                    "path": [
+                                        "sign",
+                                        "update_password"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjoxLCJpYXQiOjE3MzQ3MTA5MDIsImV4cCI6MTczNDk3MDEwMn0.pxPPYQGDwl7HHKam_d2M5tLCCfQBI1s-pwf0eWESVpo"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\"otp\":\"363523\",\n  \"password\":\"87654321\",\n  \"passwordC\":\"87654321\"\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "update password OTP",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/update_pass_otp",
+                                    "path": [
+                                        "sign",
+                                        "update_pass_otp"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjoxLCJpYXQiOjE3MzQ3MTA5MDIsImV4cCI6MTczNDk3MDEwMn0.pxPPYQGDwl7HHKam_d2M5tLCCfQBI1s-pwf0eWESVpo"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "login",
+                    "item": [
+                        {
+                            "name": "login without otp",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/login",
+                                    "path": [
+                                        "sign",
+                                        "login"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\"otp\":false,\n  \"email\":\"sarvesh2004sd@gmail.com\",\n  \"password\":\"87654321\"\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "login with otp",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/login",
+                                    "path": [
+                                        "sign",
+                                        "login"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\"otp\":true,\n  \"email\":\"sarvesh2004sd@gmail.com\"\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "verify otp and login",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/login_otp",
+                                    "path": [
+                                        "sign",
+                                        "login_otp"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\"otp\":304202,\n  \"email\":\"sarvesh2004sd@gmail.com\"\n}"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout",
+                    "item": [
+                        {
+                            "name": "logout",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/logout",
+                                    "path": [
+                                        "sign",
+                                        "logout"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjo1LCJpYXQiOjE3MzQ3MTY3OTgsImV4cCI6MTczNDk3NTk5OH0.pCHhoKb40rv-m0feQKlPbk_mIIXLrLd0FnpfoSAkxeY"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "logout All",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:3000/sign/logout_from_everywhere",
+                                    "path": [
+                                        "sign",
+                                        "logout_from_everywhere"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000"
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjo2LCJpYXQiOjE3MzQ3MTY4MTcsImV4cCI6MTczNDk3NjAxN30.WziTqqoLlzSuLxBA_tfzslwIvlDTAq1Lwj9VhG6a7M8"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Testing saving data",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/data/send",
+                    "path": [
+                        "data",
+                        "send"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcnZlc2gyMDA0c2RAZ21haWwuY29tIiwiYnJvd3NlciI6IlRodW5kZXIgQ2xpZW50IChodHRwczovL3d3dy50aHVuZGVyY2xpZW50LmNvbSkiLCJ2ZXJzaW9uIjowLCJpYXQiOjE3MzUxMzI4ODUsImV4cCI6MTczNTM5MjA4NX0.f94MYKveGIWCynXhoxLtACeHt0H3RjnGQgffTlWQPt4"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"tanks\": [\n    {\n      \"tankId\": 1,\n      \"fluidLevels\": [\n        { \"level\": 75, \"timestamp\": \"2023-10-01T00:00:00Z\" },\n        { \"level\": 76, \"timestamp\": \"2023-10-01T00:01:00Z\" }],\n      \"waterQuality\": {\n        \"pH\": 7.2,\n        \"turbidity\": 5,\n        \"temperature\": 25,\n        \"tds\": 300,\n        \"timestamp\": \"2023-10-01T00:00:00Z\"\n      }\n    }\n  ]\n}"
+                }
+            }
+        }
+    ]
+}
